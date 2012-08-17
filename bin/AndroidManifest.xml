@@ -3,6 +3,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="15" />
@@ -22,10 +25,11 @@
         </activity>
         <activity
             android:name=".NewTaskActivity"
-            android:label="@string/title_activity_task_manager" 
-            android:theme="@android:style/Theme.Dialog">
+            android:label="@string/title_activity_task_manager"
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
-        <service android:name=".TaskService"/>
+
+        <service android:name=".TaskService" />
     </application>
 
 </manifest>
